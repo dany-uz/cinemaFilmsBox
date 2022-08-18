@@ -16,3 +16,9 @@ git commit -m "mensaje" // Agrega los cambios a Git
 git push -u origin master // Sube los cambios a Git
 
 git remote add origin // Agrega una URL para subir los cambios a Git
+
+Borrar credencialess
+
+git config credential.helper "" // Configura Git para que guarde las credenciales
+
+git config --global --unset credential.helper // Configura Git para que no guarde las credenciales
