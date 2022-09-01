@@ -95,6 +95,8 @@ let peliculas = [
 
 // Metodos del array
 
+let fila = document.getElementById("fila");
+
 peliculas.forEach(function (pelicula) {
     console.log(pelicula.Nombre);
     console.log(pelicula.Genero);
@@ -103,4 +105,66 @@ peliculas.forEach(function (pelicula) {
     console.log(pelicula.Sinopsis);
     console.log(pelicula.Imagen);
     console.log(pelicula.Idioma);
+
+    // 1- Creamos una columna para cada pelicula
+    let columna = document.createElement("div");
+    columna.classList.add("col");
+
+    // 2- Creamos una tarjeta para cada pelicula
+    let tarjeta = document.createElement("div");
+    tarjeta.classList.add("card", "h-100", "p-2");
+
+    // 3- Creamos una imagen para cada pelicula
+    let imagen = document.createElement("img");
+    imagen.classList.add("card-img-top");
+    imagen.src = pelicula.Imagen;
+
+    // 4- Creamos un nombre para cada pelicula
+    let nombre = document.createElement("h4");
+    nombre.classList.add("card-title");
+    nombre.textContent = pelicula.Nombre;
+
+    // 5- Creamos el genero para cada pelicula
+    let genero = document.createElement("p");
+    genero.classList.add("card-text");
+    genero.textContent = "Genero: " + pelicula.Genero;
+
+    // 6- Creamos el idioma para cada pelicula
+    let idioma = document.createElement("p");
+    idioma.classList.add("card-text");
+    idioma.textContent = "Idioma: " + pelicula.Idioma;
+
+    // 7- Creamos la duracion para cada pelicula
+    let duracion = document.createElement("p");
+    duracion.classList.add("card-text");
+    duracion.textContent = "Duracion: " + pelicula.Duracion;
+
+    // 8- Creamos la clasificacion para cada pelicula
+    let clasificacion = document.createElement("p");
+    clasificacion.classList.add("card-text");
+    clasificacion.textContent = "Clasificacion: " + pelicula.Clasificacion;
+
+    // 9- Creamos la sinopsis para cada pelicula y la acortamos
+    let sinopsis = document.createElement("p");
+    sinopsis.classList.add("card-text");
+    sinopsis.textContent = "Sinopsis: " + pelicula.Sinopsis;
+    sinopsis.textContent = sinopsis.textContent.substring(0, 100) + "...";
+
+    //Padres - Hijos
+    tarjeta.appendChild(imagen);
+    tarjeta.appendChild(nombre);
+    tarjeta.appendChild(genero);
+    tarjeta.appendChild(idioma);
+    tarjeta.appendChild(duracion);
+    tarjeta.appendChild(clasificacion);
+    tarjeta.appendChild(sinopsis);
+    columna.appendChild(tarjeta);
+    fila.appendChild(columna);
+
 })
+
+// Detectando seleccion de una pelicula
+fila.addEventListener("click", function (e) {
+    alert("Has seleccionado la pelicula: " + e.target.textContent);
+}
+)
