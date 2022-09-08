@@ -111,7 +111,7 @@ let peliculas = [
     }
 ]
 
-let estrenos =[
+let estrenos = [
     {
         Nombre: "Invitación al infierno",
         Genero: "Terror",
@@ -203,6 +203,11 @@ peliculas.forEach(function (pelicula) {
     nombre.classList.add("card-title");
     nombre.textContent = pelicula.Nombre;
 
+    // EXTRA - Mostramos el director
+    let director = document.createElement("p");
+    director.classList.add("card-text");
+    director.textContent = "Director: " + pelicula.Director;
+
     // EXTRA - Mostramos el array de actores en un parrafo y despues de cada coma agregamos un espacio
     let actores = document.createElement("p");
     actores.classList.add("card-text");
@@ -238,6 +243,7 @@ peliculas.forEach(function (pelicula) {
     tarjeta.appendChild(imagen);
     tarjeta.appendChild(nombre);
     tarjeta.appendChild(genero);
+    tarjeta.appendChild(director);
     tarjeta.appendChild(actores);
     tarjeta.appendChild(idioma);
     tarjeta.appendChild(duracion);
@@ -278,6 +284,11 @@ estrenos.forEach(function (estreno) {
     nombre.classList.add("card-title");
     nombre.textContent = estreno.Nombre;
 
+    // EXTRA - Mostramos el director
+    let director = document.createElement("p");
+    director.classList.add("card-text");
+    director.textContent = "Director: " + estreno.Director;
+
     // EXTRA - Mostramos el array de actores en un parrafo y despues de cada coma agregamos un espacio
     let actores = document.createElement("p");
     actores.classList.add("card-text");
@@ -302,7 +313,7 @@ estrenos.forEach(function (estreno) {
     let clasificacion = document.createElement("p");
     clasificacion.classList.add("card-text");
     clasificacion.textContent = "Clasificacion: " + estreno.Clasificacion;
-    
+
     // 9- Creamos la sinopsis para cada pelicula y la acortamos
     let sinopsis = document.createElement("p");
     sinopsis.classList.add("card-text");
@@ -313,6 +324,7 @@ estrenos.forEach(function (estreno) {
     tarjeta.appendChild(imagen);
     tarjeta.appendChild(nombre);
     tarjeta.appendChild(genero);
+    tarjeta.appendChild(director);
     tarjeta.appendChild(actores);
     tarjeta.appendChild(idioma);
     tarjeta.appendChild(duracion);
