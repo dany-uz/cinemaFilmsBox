@@ -1,6 +1,29 @@
-.banner {
-    background-image: url('../img/topgunmaverick.jpg');
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+body {
+    background-color: #EDEEFF !important;
+}
+
+header {
+    color: white !important;
+    background: rgb(137,42,229);
+    background: linear-gradient(90deg, #892ae5 0%, #892ae5 25%, #5220cd 50%, #4367d3 75%, #4367d3 100%);
+}
+
+
+.iconav {
+    max-height: 100px;
+    color: white;
+}
+
+.iconav img {
+    max-height: 40px;
+}
+
+.iconav:hover {
+    transform: scale(1.25); /* scale to 75% */
+    transition: 0.5s;
+}
+
+.iconav {
+    transform: scale(1); /* scale to 75% */
+    transition: 0.5s;
 }
