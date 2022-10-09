@@ -4,7 +4,7 @@ body {
 
 header {
     color: white !important;
-    background: rgb(137,42,229);
+    background: rgb(137, 42, 229);
     background: linear-gradient(90deg, #892ae5 0%, #892ae5 25%, #5220cd 50%, #4367d3 75%, #4367d3 100%);
 }
 
@@ -19,11 +19,38 @@ header {
 }
 
 .iconav:hover {
-    transform: scale(1.25); /* scale to 75% */
+    transform: scale(1.25);
+    /* scale to 75% */
     transition: 0.5s;
 }
 
 .iconav {
-    transform: scale(1); /* scale to 75% */
+    transform: scale(1);
+    /* scale to 75% */
     transition: 0.5s;
+}
+
+.showcase {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.showcase li {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.showcase li img {
+    width: 27%;
+}
+
+.showcase li small {
+    margin-left: 5px;
 }

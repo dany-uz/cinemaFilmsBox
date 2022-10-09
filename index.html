@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cinema</title>
+    <title>Inicio</title>
 
     <!--CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,105 +20,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
         integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
         crossorigin="anonymous"></script>
-    
+    <!--FONTAWSOME-->
+    <script src="https://kit.fontawesome.com/57bc4e881f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!--HEADER-->
     <header>
-        <nav class="animate__animated animate__bounceInDown navbar
-                navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="./src/views/cartelera.html">Peliculas</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-2 text-center d-flex align-items-center">
+                    <a href="../../index.html" class="link">
+                        <img src="../../assets/img/Filmsbox.png" alt="Logo" class="img-fluid">
+                    </a>
                 </div>
+
+                <div class="col-8 text-center">
+
+                    <div class="container-fluid p-3">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-2 iconav">
+                                <a href="../../src/views/cartelera.html">
+                                    <img src="../../assets/img/Claqueta.png" alt="Cartelera" class="img-fluid m-1">
+                                </a>
+                                <p class="m-0">CARTELERA</p>
+                            </div>
+                            <div class="col-2 iconav">
+                                <a href="../../index.html">
+                                    <img src="../../assets/img/Silla.png" alt="Inicio" class="img-fluid m-1">
+                                </a>
+                                <p class="m-0">INICIO</p>
+                            </div>
+                            <div class="col-2 iconav">
+                                <a href="#">
+                                    <img src="../../assets/img/Ticket.png" alt="Próximamente" class="img-fluid m-1">
+                                </a>
+                                <p class="m-0">PRÓXIMAMENTE</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
-        </nav>
+        </div>
     </header>
 
     <!--MAIN-->
     <main>
-        <section class="banner">
-
-        </section>
-
-        <!--CARDS-->
-        <section>
-            <div class="container mt-5">
-
-                <div class="row justify-content-evenly">
-
-                    <div class="col-4">
-                        <div class="card shadow">
-                            <img src="./assets/img/BuenaSuerteLeoGrande.png" class="card-img-top" alt="Cartelera">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Card text</p>
-                                <p class="card-text"><small class="text-muted">Card description</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="card shadow">
-                            <img src="./assets/img/JackCajaMaldita2.png" class="card-img-top" alt="Cartelera">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Card text</p>
-                                <p class="card-text"><small class="text-muted">Card description</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row justify-content-evenly mt-5">
-
-                    <div class="col-4">
-                        <div class="card shadow">
-                            <img src="./assets/img/SuperMascotas.jpg" class="card-img-top" alt="Cartelera">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Card text</p>
-                                <p class="card-text"><small class="text-muted">Card description</small></p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="card shadow">
-                            <img src="./assets/img/ThorAmorYTrueno.png" class="card-img-top" alt="Cartelera">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <p class="card-text">Card text</p>
-                                <p class="card-text"><small class="text-muted">Card description</small></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <section class="my-3 p-2">
+            <img src="../../assets/img/sonic2.png" class="img-fluid" alt="Banner">
         </section>
 
         <section>
             <div class="container mt-5">
-                <h2>Cartelera</h2>
+                <h2 class="m-3 text-center">Cartelera</h2>
                 <div class="row row-cols-1 row-cols-md-4 g-3" id="fila">
 
                 </div>
@@ -127,22 +84,108 @@
 
         <section>
             <div class="container mt-5">
-                <h2>Próximamente</h2>
-                <div class="row row-cols-1 row-cols-md-4 g-3" id="fila2">
+                <h2 class="m-3 text-center">Próximamente</h2>
+                <div class="row row-cols-1 row-cols-md-5 g-3" id="fila2">
 
                 </div>
             </div>
         </section>
 
     </main>
-
+    
     <!--FOOTER-->
-    <footer>
+    <footer class="bg-dark text-center text-white mt-5">
+        <!-- Grid container -->
+        <div class="container p-4">
 
+            <!-- Footer Redes Sociales -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-outline-light btn-floating m-1"
+                    href="https://www.facebook.com/c.d.o.2204/" role="button"><i
+                        class="fa-brands fa-facebook"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://twitter.com/NightmareCloudy" role="button"><i
+                        class="fa-brands fa-twitter"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.instagram.com/cd.ospina/"
+                    role="button"><i class="fa-brands fa-instagram"></i></a>
+
+                <!-- Github -->
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/dany-uz"
+                    role="button"><i class="fa-brands fa-github"></i></a>
+            </section>
+
+
+            <!-- Footer Descripción -->
+            <section class="mb-4">
+                <h4>FILMS BOX</h4>
+                <p>
+                    Films Box, es una empresa dedicada a la exhibición de películas, con el objetivo de que los usuarios
+                    puedan encontrar las películas que más les gusten.
+                    Tenemos sedes en todo el país, y contamos con una gran variedad de películas para que puedan
+                    disfrutar de una experiencia única.
+                </p>
+            </section>
+
+            <!-- Footer Links  -->
+            <section class="">
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Contáctanos</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <a href="#!" class="text-white"><i class="fa-solid fa-mobile-screen"></i>
+                                    +573102546773</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fa-solid fa-mobile-screen"></i>
+                                    +573008396421</a>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fa-solid fa-envelope"></i>
+                                    filmsbox@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!--Grid column-->
+                    <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Trabaja con Nosotros</h5>
+
+                        <ul class="list-unstyled mb-0">
+                            <li>
+                                <p class="text-white">Envíanos tu hoja de vida a este correo!</p>
+                            </li>
+                            <li>
+                                <a href="#!" class="text-white"><i class="fa-solid fa-envelope"></i>
+                                    filmsbox@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#!">filmsbox.com</a>
+        </div>
+        <!-- Copyright -->
     </footer>
 
     <!--SCRIPTS-->
-    <script src="./src/controllers/controllerCinema.js"></script>
+    <script src="./src/controllers/controllerCinema.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
