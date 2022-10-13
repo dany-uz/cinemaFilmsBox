@@ -23,12 +23,7 @@ cinema.addEventListener("click", function(e){
                 }
             });
         });
-
-        // Cambiar las fotos de manera totalmente manual
-        // if(e.target.getAttribute("src") == "../../assets/img/Puesto.png"){
-        //     e.target.setAttribute("src", "../../assets/img/Puesto-Verde.png");
-        // } else if(e.target.getAttribute("src") == "../../assets/img/Puesto-Verde.png"){
-        //     e.target.setAttribute("src", "../../assets/img/Puesto.png");
-        // }
     }
 });
+
+// Si presiona el botón de comprar, se debe guardar en el localStorage

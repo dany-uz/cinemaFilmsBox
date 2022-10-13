@@ -1,24 +1,4 @@
-Se va a trabajar con React, únicamente la parte del Front-End
+Para el siguiente parcial queda pendiente:
 
-Cambiar el nombre de la carpeta a "cineMiercoles"
-
-npm install -g firebase-tools
-
-
-Comando utilizados para Git Bash
-
-git init // Inicializa el repositorio
-
-git add . // Agrega todos los archivos a Git
-
-git commit -m "mensaje" // Agrega los cambios a Git
-
-git push -u origin master // Sube los cambios a Git
-
-git remote add origin // Agrega una URL para subir los cambios a Git
-
-Borrar credencialess
-
-git config credential.helper "" // Configura Git para que guarde las credenciales
-
-git config --global --unset credential.helper // Configura Git para que no guarde las credenciales
+1- Generar un factura con las sillas seleccionadas
+2- Al reservar una silla al momento de reservar deben aparecer en rojo
