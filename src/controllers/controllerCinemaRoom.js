@@ -10,8 +10,8 @@ cinema.addEventListener("click", function(e){
         
         let id = e.target.getAttribute("id");
 
-        asientos.forEach(function(hilera){
-            hilera.forEach(function(asiento){
+        asientos.forEach(function(fila){
+            fila.forEach(function(asiento){
                 if(asiento.id == id){
                     if(asiento.estado == 0){
                         asiento.estado = 1;
@@ -25,5 +25,3 @@ cinema.addEventListener("click", function(e){
         });
     }
 });
-
-// Si presiona el botón de comprar, se debe guardar en el localStorage

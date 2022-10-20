@@ -54,3 +54,13 @@ header {
 .showcase li small {
     margin-left: 5px;
 }
+
+.pantalla {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 5px;
+    color: #777;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}

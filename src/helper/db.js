@@ -1,8 +1,10 @@
+let receptor = JSON.parse(localStorage.getItem("asientosSeleccionados"));
+
 export let peliculas = [
     {
         Nombre: "Bestia",
         Genero: "Acción",
-        Duracion: "120 min",
+        Duracion: "100 min",
         Clasificacion: "B",
         Sinopsis: "A veces el susurro en los arbustos es en realidad un monstruo. Idris Elba (Rápidos y Furiosos: Hobbs & Shaw, El Escuadrón Suicida) protagoniza un nuevo y emocionante thriller sobre un padre y sus dos hijas adolescentes que se ven perseguidos por un enorme león que intenta demostrar que la selva sólo tiene un máximo depredador. Elba interpreta al Dr. Nate Daniels, un marido que acaba de enviudar y que regresa a Sudáfrica, donde conoció a su mujer, en un viaje que llevaba tiempo planeando con sus hijas a una zona de caza controlada por Martin Battles (Sharlto Copley, serie Muñeca Rusa, Maléfica), un viejo amigo de la familia y biólogo especializado en vida salvaje. Pero lo que comienza como un viaje de sanación se convierte en una aterradora lucha por sobrevivir cuando un león, que ha escapado de los cazadores clandestinos sediento de sangre y que ahora ve a todos los humanos como el enemigo, comienza a acecharlos. Iyana Halley (The Hate U Give, serie This is Us) interpreta a la hija de Daniels, Meredith, de 18 años, y Leah Sava Jeffries (serie Rel, serie Empire) a su hija de 13 años, Norah. De Baltasar Kormákur, director de Everesty de las películas de Universal Pictures 2 Guns y Contrabando, Bestia es producida por Will Packer, el exitoso productor de Plan de chicas, la franquicia Un novato en apuros y diez películas que han abierto el número 1 en la taquilla de Estados Unidos, incluyendo Escuela Nocturna, Favor peligroso y Piensa como hombre, de James Lopez, presidente de Will Packer Productions, y de Baltasar Kormákur. La película está escrita por Ryan Engle (Rampage, Non-Stop) a partir de una historia original de Jaime Primak Sullivan y cuenta con la producción ejecutiva de Jaime Primak Sullivan y Bernard Bellew.",
         Imagen: "https://firebasestorage.googleapis.com/v0/b/fotoscartelera-f621d.appspot.com/o/Bestia.jpg?alt=media&token=c855307a-9f23-451c-8ede-7daa2010e02a",
@@ -169,89 +171,95 @@ export let estrenos = [
     }
 ]
 
-export let asientos = [
-    [
-        { id: "a1", estado: 0 }, 
-        { id: "b1", estado: 0 }, 
-        { id: "c1", estado: 3 }, 
-        { id: "d1", estado: 3 }, 
-        { id: "e1", estado: 3 },
-        { id: "f1", estado: 3 }, 
-        { id: "g1", estado: 3 }, 
-        { id: "h1", estado: 3 }, 
-        { id: "i1", estado: 0 }, 
-        { id: "j1", estado: 0 }
-    ],
-    [
-        { id: "a2", estado: 0 },
-        { id: "b2", estado: 2 },
-        { id: "c2", estado: 0 },
-        { id: "d2", estado: 3 },
-        { id: "e2", estado: 3 },
-        { id: "f2", estado: 3 }, 
-        { id: "g2", estado: 3 }, 
-        { id: "h2", estado: 0 }, 
-        { id: "i2", estado: 0 }, 
-        { id: "j2", estado: 0 }
-    ],
-    [
-        { id: "a3", estado: 0 },
-        { id: "b3", estado: 0 },
-        { id: "c3", estado: 0 },
-        { id: "d3", estado: 0 },
-        { id: "e3", estado: 0 },
-        { id: "f3", estado: 0 }, 
-        { id: "g3", estado: 0 }, 
-        { id: "h3", estado: 0 }, 
-        { id: "i3", estado: 0 }, 
-        { id: "j3", estado: 0 }
-    ],
-    [
-        { id: "a4", estado: 0 },
-        { id: "b4", estado: 0 },
-        { id: "c4", estado: 0 },
-        { id: "d4", estado: 0 },
-        { id: "e4", estado: 0 },
-        { id: "f4", estado: 0 }, 
-        { id: "g4", estado: 0 }, 
-        { id: "h4", estado: 0 }, 
-        { id: "i4", estado: 0 }, 
-        { id: "j4", estado: 0 }
-    ],
-    [
-        { id: "a5", estado: 0 },
-        { id: "b5", estado: 0 },
-        { id: "c5", estado: 0 },
-        { id: "d5", estado: 2 },
-        { id: "e5", estado: 0 },
-        { id: "f5", estado: 0 }, 
-        { id: "g5", estado: 0 }, 
-        { id: "h5", estado: 0 }, 
-        { id: "i5", estado: 0 }, 
-        { id: "j5", estado: 0 }
-    ],
-    [
-        { id: "a6", estado: 0 },
-        { id: "b6", estado: 0 },
-        { id: "c6", estado: 0 },
-        { id: "d6", estado: 0 },
-        { id: "e6", estado: 0 },
-        { id: "f6", estado: 0 }, 
-        { id: "g6", estado: 0 }, 
-        { id: "h6", estado: 0 }, 
-        { id: "i6", estado: 0 }, 
-        { id: "j6", estado: 0 }
-    ],
-    [
-        { id: "a7", estado: 0 },
-        { id: "b7", estado: 0 },
-        { id: "c7", estado: 0 },
-        { id: "d7", estado: 0 },
-        { id: "e7", estado: 0 },
-        { id: "f7", estado: 0 }, 
-        { id: "g7", estado: 0 }, 
-        { id: "h7", estado: 0 }, 
-        { id: "i7", estado: 0 }, 
-        { id: "j7", estado: 0 }
+export let asientos;
+if (receptor == null) {
+    asientos = [
+        [
+            { id: "a1", estado: 0 }, 
+            { id: "b1", estado: 0 }, 
+            { id: "c1", estado: 3 }, 
+            { id: "d1", estado: 3 }, 
+            { id: "e1", estado: 3 },
+            { id: "f1", estado: 3 }, 
+            { id: "g1", estado: 3 }, 
+            { id: "h1", estado: 3 }, 
+            { id: "i1", estado: 0 }, 
+            { id: "j1", estado: 0 }
+        ],
+        [
+            { id: "a2", estado: 0 },
+            { id: "b2", estado: 0 },
+            { id: "c2", estado: 0 },
+            { id: "d2", estado: 3 },
+            { id: "e2", estado: 3 },
+            { id: "f2", estado: 3 }, 
+            { id: "g2", estado: 3 }, 
+            { id: "h2", estado: 0 }, 
+            { id: "i2", estado: 0 }, 
+            { id: "j2", estado: 0 }
+        ],
+        [
+            { id: "a3", estado: 0 },
+            { id: "b3", estado: 0 },
+            { id: "c3", estado: 0 },
+            { id: "d3", estado: 0 },
+            { id: "e3", estado: 0 },
+            { id: "f3", estado: 0 }, 
+            { id: "g3", estado: 0 }, 
+            { id: "h3", estado: 0 }, 
+            { id: "i3", estado: 0 }, 
+            { id: "j3", estado: 0 }
+        ],
+        [
+            { id: "a4", estado: 0 },
+            { id: "b4", estado: 0 },
+            { id: "c4", estado: 0 },
+            { id: "d4", estado: 0 },
+            { id: "e4", estado: 0 },
+            { id: "f4", estado: 0 }, 
+            { id: "g4", estado: 0 }, 
+            { id: "h4", estado: 0 }, 
+            { id: "i4", estado: 0 }, 
+            { id: "j4", estado: 0 }
+        ],
+        [
+            { id: "a5", estado: 0 },
+            { id: "b5", estado: 0 },
+            { id: "c5", estado: 0 },
+            { id: "d5", estado: 0 },
+            { id: "e5", estado: 0 },
+            { id: "f5", estado: 0 }, 
+            { id: "g5", estado: 0 }, 
+            { id: "h5", estado: 0 }, 
+            { id: "i5", estado: 0 }, 
+            { id: "j5", estado: 0 }
+        ],
+        [
+            { id: "a6", estado: 0 },
+            { id: "b6", estado: 0 },
+            { id: "c6", estado: 0 },
+            { id: "d6", estado: 0 },
+            { id: "e6", estado: 0 },
+            { id: "f6", estado: 0 }, 
+            { id: "g6", estado: 0 }, 
+            { id: "h6", estado: 0 }, 
+            { id: "i6", estado: 0 }, 
+            { id: "j6", estado: 0 }
+        ],
+        [
+            { id: "a7", estado: 0 },
+            { id: "b7", estado: 0 },
+            { id: "c7", estado: 0 },
+            { id: "d7", estado: 0 },
+            { id: "e7", estado: 0 },
+            { id: "f7", estado: 0 }, 
+            { id: "g7", estado: 0 }, 
+            { id: "h7", estado: 0 }, 
+            { id: "i7", estado: 0 }, 
+            { id: "j7", estado: 0 }
+        ]
     ]
-]
+} else {
+    asientos = receptor
+}
+

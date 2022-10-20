@@ -16,10 +16,10 @@ export function pintarAsientos(asientos, cinema) {
             imgAsiento.setAttribute("src", "../../assets/img/Puesto.png");
             imgAsiento.classList.add("img-fluid");
             imgAsiento.classList.add("w-100");
-            // Negro = Disponible
-            // Verde = Seleccionado
-            // Rojo = Ocupado
-            // Azul = Discapacitados
+            // 0 Negro = Disponible
+            // 1 Verde = Seleccionado
+            // 2 Rojo = Ocupado
+            // 3 Azul = Discapacitados
             if(asiento.estado==0){
                 imgAsiento.setAttribute("src", "../../assets/img/Puesto.png");
             } else if(asiento.estado==1){
@@ -35,5 +35,4 @@ export function pintarAsientos(asientos, cinema) {
         });
         cinema.appendChild(fila);
     });
-
 } 

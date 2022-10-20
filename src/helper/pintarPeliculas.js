@@ -25,37 +25,37 @@ export function pintarPeliculas(peliculas, estrenos) {
         // EXTRA - Mostramos el director
         let director = document.createElement("p");
         director.classList.add("card-text");
-        director.textContent = "Director: " + pelicula.Director;
+        director.textContent = pelicula.Director;
     
         // EXTRA - Mostramos el array de actores en un parrafo y despues de cada coma agregamos un espacio
         let actores = document.createElement("p");
         actores.classList.add("card-text");
-        actores.textContent = "Actores: " + pelicula.Actores.join(", ");
+        actores.textContent = pelicula.Actores.join(", ");
     
         // 5- Creamos el genero para cada pelicula
         let genero = document.createElement("p");
         genero.classList.add("card-text");
-        genero.textContent = "Genero: " + pelicula.Genero;
+        genero.textContent = pelicula.Genero;
     
         // 6- Creamos el idioma para cada pelicula
         let idioma = document.createElement("p");
         idioma.classList.add("card-text");
-        idioma.textContent = "Idioma: " + pelicula.Idioma;
+        idioma.textContent = pelicula.Idioma;
     
         // 7- Creamos la duracion para cada pelicula
         let duracion = document.createElement("p");
         duracion.classList.add("card-text");
-        duracion.textContent = "Duracion: " + pelicula.Duracion;
+        duracion.textContent = pelicula.Duracion;
     
         // 8- Creamos la clasificacion para cada pelicula
         let clasificacion = document.createElement("p");
         clasificacion.classList.add("card-text");
-        clasificacion.textContent = "Clasificacion: " + pelicula.Clasificacion;
+        clasificacion.textContent = pelicula.Clasificacion;
     
         // 9- Creamos la sinopsis para cada pelicula y la acortamos
         let sinopsis = document.createElement("p");
         sinopsis.classList.add("card-text");
-        sinopsis.textContent = "Sinopsis: " + pelicula.Sinopsis;
+        sinopsis.textContent = pelicula.Sinopsis;
         sinopsis.textContent = sinopsis.textContent.substring(0, 100) + "...";
     
         //Padres - Hijos
